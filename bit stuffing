@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main()
+{
+	int w,i,f,frames[50];
+	printf("enter window size:");
+	scanf("%d",&w);
+	printf("no of frames:");
+	scanf("%d",&f);
+	printf("enter %d frames:",f);
+	for(i=1;i<=f;i++)
+		scanf("%d",&frames[i]);
+	printf("ack recievd by the sender after %d frames:",w);
+	for(i=1;i<=f;i++)
+	{
+		if(i%w==0)
+		{
+			printf("%d\n",frames[i]);
+			printf("farmes recieved by the sender");
+		}
+		else
+		{
+			printf("%d",frames[i]);
+		}
+		if(f%w!=0)
+			printf("acknowledgement recievd by the sender");
+			return 0;	
+	}
+}
+OUTPUT:
+enter window size:3
+no of frames:5
+enter 5 frames:12
+5
+89
+4
+6
+ack recievd by the sender after 3 frames:12 5 89 
+acknowledgement recievd by the sender 4 6
